@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+Description: Alexa responds with the count and anagrams for a requested word
+Resources:
+  anagram:
+    Type: AWS::Serverless::Function
+    Properties:
+      Description: Alexa responds with the count and anagrams for a requested word
+      Handler: src/index.handler
+      Runtime: nodejs6.10
+      CodeUri: build/anagram.zip
+      Timeout: 10
+      Events:
+        alexa:
+          Type: AlexaSkill
