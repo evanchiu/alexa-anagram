@@ -1,0 +1,34 @@
+{
+  "languageModel": {
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "getAnagrams",
+        "samples": [
+          "about {hello|target}",
+          "of {hello|target}",
+          "for {hello|target}",
+          "What are anagrams of {hello|target}"
+        ],
+        "slots": [
+          {
+            "name": "target",
+            "type": "AMAZON.LITERAL"
+          }
+        ]
+      }
+    ],
+    "invocationName": "anagram"
+  }
+}

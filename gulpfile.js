@@ -14,6 +14,7 @@ gulp.task('lint', () => {
 gulp.task('zip', function() {
   const paths = [
     'src/*.js',
+    'data/**',
     'node_modules/**/*.js',
     'node_modules/**/*.json'
   ];

@@ -9,7 +9,7 @@ Resources:
       Handler: src/index.handler
       Runtime: nodejs6.10
       CodeUri: build/anagram.zip
-      Timeout: 10
+      Timeout: 30
       Events:
         alexa:
           Type: AlexaSkill

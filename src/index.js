@@ -12,9 +12,11 @@ var handlers = {
         this.event.request.intent.slots.target &&
         this.event.request.intent.slots.target.value) {
       var target = this.event.request.intent.slots.target.value;
-      var results = anagrams.getAnagrams(target.toLowerCase());
-      results.sort();
-      this.emit(':tell', target + ' has ' + results.length + ' anagrams, ' + results.join(', '));
+      var self = this;
+      anagrams.getAnagrams(target, function(err, results) {
+        console.log(results);
+        self.emit(':tell', target + ' has ' + results.length + ' subanagrams. ' + results.join(', '));
+      });
     } else {
       console.error('Missing target value');
       this.emit(':tell', 'I\'m sorry, I don\'t understand which word you\'re asking about');
