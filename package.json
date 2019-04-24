@@ -1,11 +1,11 @@
 {
   "name": "alexa-anagram",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Alexa responds with the count and anagrams for a requested word",
   "main": "src/index.js",
   "scripts": {
     "build": "node_modules/gulp/bin/gulp.js",
-    "package": "aws cloudformation package --template-file template.yml --output-template-file packaged-template.yml --s3-bucket $S3_BUCKET",
+    "package": "aws cloudformation package --template-file template.yml --output-template-file packaged-template.yml --s3-bucket $CODE_BUCKET",
     "deploy": "aws cloudformation deploy --template-file packaged-template.yml --capabilities CAPABILITY_IAM --stack-name dev-alexa-anagram-$USER"
   },
   "repository": {

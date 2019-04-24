@@ -7,7 +7,7 @@ Resources:
     Properties:
       Description: Alexa responds with the count and anagrams for a requested word
       Handler: src/index.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs8.10
       CodeUri: build/anagram.zip
       Timeout: 30
       Events:
